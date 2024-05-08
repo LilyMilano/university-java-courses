@@ -45,6 +45,8 @@ public class ChangeCalculatorEx4 {
         System.out.printf("You have a total of %1.2f dollars in your purse.%n"
                 , dollars);
 
+        scanner.close();
+
         /*
         * Output:
         * How many quarters do you have? 2
