@@ -32,7 +32,7 @@ public class Switch_If {
                     "9.");
         }
 
-        /* Switch Statement */
+        /* Enhanced Switch Statement */
         switch (N) {    // (N is the same integer variable)
             case 1 -> System.out.println("The number is 1.");
             case 2, 4, 8 -> {
@@ -41,19 +41,47 @@ public class Switch_If {
             }
             case 3, 6, 9 -> {
                 System.out.println("The number is 3, 6, or 9.");
-                System.out.println("(That's a power of 3!)");
+                System.out.println("(That's a multiple of 3!)");
             }
             case 5 -> System.out.println("The number is 5.");
             default -> System.out.println("The number is 7 or is outside the " +
                     "range 1 to 9.");
         }
 
+        /* Traditional Switch Statement */
+        switch (N) {    // (N is the same integer variable)
+            case 1:
+                System.out.println("The number is 1.");
+                break;
+            case 2: // fall through
+            case 4: // fall through
+            case 8:
+                System.out.println("The number is 2, 4, or 8.");
+                System.out.println("(That's a power of 2!)");
+                break;
+            case 3: // fall through
+            case 6: // fall through
+            case 9:
+                System.out.println("The number is 3, 6, or 9.");
+                System.out.println("(That's a multiple of 3!)");
+                break;
+            case 5:
+                System.out.println("The number is 5.");
+                break;
+            default:
+                System.out.println("The number is 7 or is outside the range 1" +
+                        " to 9.");
+        }
+
+        //*********************************************************************
         /* Output
         Please enter a integer number in the range 1 to 9: 6
         The number is 3, 6, or 9.
         (That's a multiple of 3!)
         The number is 3, 6, or 9.
-        (That's a power of 3!)
+        (That's a multiple of 3!)
+        The number is 3, 6, or 9.
+        (That's a multiple of 3!)
 
         Process finished with exit code 0
         */
