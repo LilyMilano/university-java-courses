@@ -1,0 +1,144 @@
+New York: 298734.12
+Los Angeles: No report received
+Chicago: 187654.89
+Houston: 275432.76
+Phoenix: 154321.45
+Philadelphia: 213456.78
+San Antonio: No report received
+San Diego: 198765.43
+Dallas: 176543.21
+San Jose: 234567.32
+Austin: 265432.10
+Jacksonville: No report received
+San Francisco: 187654.89
+Columbus: 154321.45
+Fort Worth: 198765.43
+Indianapolis: 213456.78
+Charlotte: 265432.10
+Seattle: 298734.12
+Denver: No report received
+Washington: 275432.76
+Boston: 187654.89
+El Paso: 154321.45
+Nashville: 198765.43
+Detroit: 213456.78
+Oklahoma City: 265432.10
+Portland: 298734.12
+Las Vegas: No report received
+Memphis: 275432.76
+Louisville: 187654.89
+Baltimore: 154321.45
+Milwaukee: 198765.43
+Albuquerque: 213456.78
+Tucson: 265432.10
+Fresno: 298734.12
+Sacramento: No report received
+Mesa: 275432.76
+Kansas City: 187654.89
+Atlanta: 154321.45
+Long Beach: 198765.43
+Omaha: 213456.78
+Raleigh: 265432.10
+Miami: 298734.12
+Virginia Beach: No report received
+Oakland: 275432.76
+Minneapolis: 187654.89
+Tulsa: 154321.45
+Arlington: 198765.43
+New Orleans: 213456.78
+Wichita: 265432.10
+Cleveland: 298734.12
+Tampa: No report received
+Bakersfield: 275432.76
+Aurora: 187654.89
+Anaheim: 154321.45
+Honolulu: 198765.43
+Santa Ana: 213456.78
+Riverside: 265432.10
+Corpus Christi: 298734.12
+Lexington: No report received
+Stockton: 275432.76
+St. Louis: 187654.89
+Saint Paul: 154321.45
+Henderson: 198765.43
+Pittsburgh: 213456.78
+Cincinnati: 265432.10
+Anchorage: 298734.12
+Greensboro: No report received
+Plano: 275432.76
+Lincoln: 187654.89
+Orlando: 154321.45
+Irvine: 198765.43
+Newark: 213456.78
+Durham: 265432.10
+Chula Vista: 298734.12
+Toledo: No report received
+Fort Wayne: 275432.76
+St. Petersburg: 187654.89
+Laredo: 154321.45
+Jersey City: 198765.43
+Chandler: 213456.78
+Madison: 265432.10
+Lubbock: 298734.12
+Scottsdale: No report received
+Reno: 275432.76
+Buffalo: 187654.89
+Gilbert: 154321.45
+Glendale: 198765.43
+North Las Vegas: 213456.78
+Winston-Salem: 265432.10
+Chesapeake: 298734.12
+Norfolk: No report received
+Fremont: 275432.76
+Garland: 187654.89
+Irving: 154321.45
+Hialeah: 198765.43
+Richmond: 213456.78
+Boise: 265432.10
+Spokane: 298734.12
+Baton Rouge: No report received
+Anchorage: 187654.89
+Madison: 154321.45
+Lubbock: 198765.43
+Gilbert: 213456.78
+Norfolk: 265432.10
+Reno: 298734.12
+Scottsdale: No report received
+Glendale: 275432.76
+Hialeah: 187654.89
+Garland: 154321.45
+Irving: 198765.43
+Fremont: 213456.78
+Richmond: 265432.10
+Boise: 298734.12
+Baton Rouge: No report received
+Des Moines: 275432.76
+Salt Lake City: 187654.89
+Tallahassee: 154321.45
+Worcester: 198765.43
+Knoxville: 213456.78
+Newport News: 265432.10
+Providence: 298734.12
+Santa Clarita: No report received
+Fort Lauderdale: 275432.76
+Garden Grove: 187654.89
+Oceanside: 154321.45
+Rancho Cucamonga: 198765.43
+Santa Rosa: 213456.78
+Vancouver: 265432.10
+Sioux Falls: 298734.12
+Peoria: No report received
+Ontario: 275432.76
+Jackson: 187654.89
+Elk Grove: 154321.45
+Springfield: 198765.43
+Pembroke Pines: 213456.78
+Salem: 265432.10
+Corona: 298734.12
+Eugene: No report received
+McKinney: 275432.76
+Fort Collins: 187654.89
+Lancaster: 154321.45
+Cary: 198765.43
+Palmdale: 213456.78
+Hayward: 265432.10
