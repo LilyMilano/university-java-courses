@@ -25,7 +25,7 @@ public class MinimumDivisors {
         N that has lesser divisors than the current value of minDivisors.
         */
 
-        for (N = 2; N <= 5000 ; N++) {
+        for (N = 1; N <= 5000 ; N++) {
 
             int D;  // A number to be tested to see if it's a divisor of N.
             int divisorsCount = 0;  // Number of divisors of N.
@@ -42,13 +42,13 @@ public class MinimumDivisors {
         }   // end outer loop
 
         // System.out.println(N);  // 5001
-        // System.out.println(numWithMin); // 2
+        // System.out.println(numWithMin); // 1
 
         System.out.printf("The number with fewer divisors among 1 to 5000 is " +
                 "%d. It has %d divisors.", numWithMin, minDivisors);
 
         /* Output:
-        * The number with fewer divisors among 1 to 5000 is 2. It has 2
+        * The number with fewer divisors among 1 to 5000 is 1. It has 1
         * divisors.
         * Process finished with exit code 0
         */
