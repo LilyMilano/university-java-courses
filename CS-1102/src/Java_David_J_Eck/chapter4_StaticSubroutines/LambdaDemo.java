@@ -5,6 +5,10 @@ package Java_David_J_Eck.chapter4_StaticSubroutines;
  * programming by allowing the use of lambda expressions and method references.
  * Lambda expressions and method references are used to
  * represent instances of these functional interfaces.
+ * <p>
+ * In summary, interfaces in Java act as a datatype (with their own methods)
+ * that allows you to work with objects of different classes through a common
+ * interface, treating functions as another kind of data inside the computer.
  */
 
 public class LambdaDemo {
