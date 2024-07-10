@@ -40,6 +40,13 @@ public class Hex2Dec_4_2 {
         } catch (IllegalArgumentException e) {
             System.out.println("Error: Input is not a hexadecimal number.");
         }
+
+        /* Output:
+        * Enter a hexadecimal number: 3E
+        * Base-10 value:  62
+        *
+        * Process finished with exit code 0
+        */
     }   // end of main()
 
     /**
