@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"Java_David_J_Eck.chapter5_OOP_Objects","c":"HighLow","l":"HighLow()","u":"%3Cinit%3E()"},{"p":"Java_David_J_Eck.chapter5_OOP_Objects","c":"HighLow","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();

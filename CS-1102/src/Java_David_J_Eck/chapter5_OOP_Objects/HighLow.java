@@ -103,7 +103,7 @@ public class HighLow {
         */
     }   // end of main()
 
-    /* Method to handle user input for playing again with validation: */
+    /** Method to handle user input for playing again with validation: */
     private static boolean getPlayingAgainInput(Scanner scanner) {
         while (true) {
             System.out.print("Play again? (true/false): ");
