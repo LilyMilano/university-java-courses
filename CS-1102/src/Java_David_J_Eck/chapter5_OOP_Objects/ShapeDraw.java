@@ -2,10 +2,7 @@ package Java_David_J_Eck.chapter5_OOP_Objects;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 
 /**
  * A drawing program that lets the user add shapes to a drawing
@@ -98,7 +95,7 @@ public class ShapeDraw extends JPanel {
         // let the user drag them around.  It uses an off-screen images to
         // make the dragging look as smooth as possible.
         Shape[] shapes = new Shape[500];    // holds a list up to 500 shapes.
-        int shapeCount= 0;  // the actual number of shapes.
+        int shapeCount = 0;  // the actual number of shapes.
         Color currentColor = Color.RED; // current color; when a shape is
         // created, this is its color.
 
@@ -130,17 +127,32 @@ public class ShapeDraw extends JPanel {
             // Respond by adding the appropriate shape to the canvas.
             if (event.getSource() == colorChoice) {
                 switch (colorChoice.getSelectedIndex()) {
-                    case 0: currentColor = Color.RED; break;
-                    case 1: currentColor = Color.GREEN; break;
-                    case 2: currentColor = Color.BLUE; break;
-                    case 3: currentColor = Color.CYAN; break;
-                    case 4: currentColor = Color.MAGENTA; break;
-                    case 5: currentColor = Color.YELLOW; break;
-                    case 6: currentColor = Color.BLACK; break;
-                    case 7: currentColor = Color.WHITE; break;
+                    case 0:
+                        currentColor = Color.RED;
+                        break;
+                    case 1:
+                        currentColor = Color.GREEN;
+                        break;
+                    case 2:
+                        currentColor = Color.BLUE;
+                        break;
+                    case 3:
+                        currentColor = Color.CYAN;
+                        break;
+                    case 4:
+                        currentColor = Color.MAGENTA;
+                        break;
+                    case 5:
+                        currentColor = Color.YELLOW;
+                        break;
+                    case 6:
+                        currentColor = Color.BLACK;
+                        break;
+                    case 7:
+                        currentColor = Color.WHITE;
+                        break;
                 }
-            }
-            else {
+            } else {
                 String command = event.getActionCommand();
                 if (command.equals("Rect"))
                     addShape(new RectShape());
@@ -164,37 +176,87 @@ public class ShapeDraw extends JPanel {
 
         // --------- This rest of this class implements dragging --------------
 
+        Shape shapeBeingDragged = null; // This is null unless a shape is 
+        // being dragged.
+        // A non-null value is used as a signal that dragging is in progress,
+        // as well as indicating which shape is being dragged.
 
+        int prevDragX;   // During dragging, these record the x and y 
+        int prevDragY;   // coordinates of the previous position of the mouse.
 
+        public void mousePressed(MouseEvent event) {
+            // User has pressed the mouse. Find the shape that the user has
+            // click on, if any. I f there is a shape at the position when
+            // the mouse was clicked , then start dragging it. If the user
+            // was holding down the shift key, then bring the dragged shape
+            // to the front, in front of all the other shapes.
+            int x = event.getX();   // Retrieves x-coordinate of point where
+            // the mouse was clicked.
+            int y = event.getY(); // Retrieves y-coordinate of point where the
+            // mouse was clicked.
+            for (int i = shapeCount - 1; i >= 0; i--) {    // check shapes
+                // from front to back.
+                Shape s = shapes[i];
+                if (s.containsPoint(x, y)) {    // Check if the shape
+                    // contains the clicked point.
+                    shapeBeingDragged = s;  // Set the current shape to the
+                    // one being dragged.
+                    prevDragX = x;  // Store the x-coordinate for dragging.
+                    prevDragY = y;  // Store the y-coordinate for dragging.
+                    if (event.isShiftDown()) {  // Checks if the Shift key is
+                        // held down. s should be moved on top of all the
+                        // other shapes.
 
+                        for (int j = i; j < shapeCount - 1; j++) {
+                            // move the shapes following s down in the list
+                            shapes[j] = shapes[j + 1];  // z-order management
+                        }
+                        shapes[shapeCount - 1] = s; // put s at the end of
+                        // the list.
+                        repaint();  // Request a repaint to update the
+                        // display. repaint canvas to show s in front of
+                        // the shapes.
+                    }
+                    return; // Exit the method after handling the drag
+                    // initiation.
+                }
+            }
+        }   // end of MousePressed()
 
+        public void mouseDragged(MouseEvent event) {
+            // User has move the mouse. Move the drag shape by the same amount.
+            int x = event.getX();
+            int y = event.getY();
+            if (shapeBeingDragged != null) {
+                shapeBeingDragged.moveBy(x - prevDragY, y - prevDragY);
+                prevDragX = x;
+                prevDragY = y;
+                repaint();  // redraw canvas to show shape in new position.
+            }
+        }   // end of MouseDragged()
 
+        public void mouseReleased(MouseEvent event) {
+            // User has released the mouse. Move the drag shape, then set
+            // shapeBeingDragged to null to indicate that dragging is over.
+            int x = event.getX();
+            int y = event.getY();
+            if (shapeBeingDragged != null) {
+                shapeBeingDragged.moveBy(x - prevDragX, y - prevDragY);
+                shapeBeingDragged = null;
+                repaint();
+            }
+        }   // end of MouseReleased()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        public void mouseEntered(MouseEvent event) {}    // Other methods
+            // required for MouseListener and MouseMotionListener interfaces.
+        public void mouseExited(MouseEvent event) {}
+        public void mouseMoved(MouseEvent event) {}
+        public void mouseClicked(MouseEvent event) {}
 
     }   // end of DrawingArea class
 
     // ------- Nested class definitions for the abstract Shape class and
-    // three -----
-    // -------------------- concrete subclasses of Shape.
-    // --------------------------
+    // three concrete subclasses of Shape--------------------------
 
     static abstract class Shape {
         // A class representing shapes that can be displayed on a ShapeCanvas.
