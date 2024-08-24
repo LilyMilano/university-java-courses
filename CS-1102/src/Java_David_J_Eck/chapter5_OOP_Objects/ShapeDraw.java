@@ -228,7 +228,7 @@ public class ShapeDraw extends JPanel {
             int x = event.getX();
             int y = event.getY();
             if (shapeBeingDragged != null) {
-                shapeBeingDragged.moveBy(x - prevDragY, y - prevDragY);
+                shapeBeingDragged.moveBy(x - prevDragX, y - prevDragY);
                 prevDragX = x;
                 prevDragY = y;
                 repaint();  // redraw canvas to show shape in new position.
